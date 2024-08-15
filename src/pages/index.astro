@@ -2,8 +2,22 @@
 // imports
 import MainLayout from "../layouts/MainLayout.astro"
 
+
+const foregroundColor = "hsl(20, 50%, 50%)";
+const backgroundColor = "hsl(200, 50%, 50%)";
 ---
 <MainLayout title="My blog">
-	<p>Hi from Home!</p>
+	<p>Hi from <span>Home!</span></p>
 </MainLayout>
 
+<style define:vars={{foregroundColor, backgroundColor}}> // affects everything on site with is:global, can also add scss and other css frameworks; lang="scss"
+// can also use variables to dynamically change styling, define:vars
+p {
+	background-color: orange;
+	color: var(--foregroundColor);
+}
+
+
+
+
+</style>
