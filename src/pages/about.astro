@@ -1,12 +1,24 @@
 ---
 // imports
 import MainLayout from "../layouts/MainLayout.astro"
+import Link from "../components/Link.astro";
 
 
 
 ---
 <MainLayout title="About" description="My About page" >
-   <p>Hi from  About!</p>
+   <section class="container about" aria-label="About me">
+      <img src="/images/headshot.jpg" alt="My headshot" width="200" height="200">
+      <div class="content">
+         <h1 class="h1">My blog</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias animi consequatur, dolor esse excepturi expedita illum in necessitatibus, nisi odit omnis quam quidem quis quos sapiente sint soluta totam?</p>
+         <Link href="mailto:christopher.hoee@gmail.com"
+               style={"primary"}
+               text="Contact me"
+         />
+
+      </div>
+   </section>
 </MainLayout>
 
 
