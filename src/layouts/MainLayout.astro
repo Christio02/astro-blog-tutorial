@@ -3,6 +3,8 @@ import MainHead from "./MainHead.astro";
 
 // style import
 import "../styles/global.css"
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro"
 
 
 
@@ -13,9 +15,17 @@ const { title = "My Astro project", description = "I like dirt" } = Astro.props
 <MainHead {title} {description}/>
 
 <body>
+    <Nav/>
     <slot>
         Default text
     </slot>
+    <Footer/>
+
+
 
 </body>
 </html>
+<style>
+
+
+</style>
